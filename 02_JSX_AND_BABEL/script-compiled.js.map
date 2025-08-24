@@ -1,0 +1,32 @@
+{
+  "version": 3,
+  "file": "script-compiled.js",
+  "names": [
+    "container",
+    "React",
+    "createElement",
+    "className",
+    "src",
+    "alt",
+    "style",
+    "width",
+    "htmlFor",
+    "placeholder",
+    "type",
+    "id",
+    "root",
+    "ReactDOM",
+    "createRoot",
+    "document",
+    "querySelector",
+    "render"
+  ],
+  "sources": [
+    "script.js"
+  ],
+  "sourcesContent": [
+    "// const container = React.createElement(\r\n//   \"container\",\r\n//   { className: \"container\", key: 1 },\r\n//   [\r\n//     React.createElement(\"section\", { className: \"section\", key: 1 }, [\r\n//       React.createElement(\"div\", { className: \"content\", key: 2 }, [\r\n//         React.createElement(\"img\", {\r\n//           src: \"https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg\",\r\n//           alt: \"animals\",\r\n//           key: 1,\r\n//           style: { width: 200 },\r\n//         }),\r\n//       ]),\r\n//       React.createElement(\"form\", { className: \"form-content\", key: 1 }, [\r\n//         React.createElement(\"div\", { key: 1, className: \"form-group\" }, [\r\n//           React.createElement(\r\n//             \"label\",\r\n//             { key: 1, htmlFor: \"username\" },\r\n//             \"username\"\r\n//           ),\r\n//           React.createElement(\"input\", {\r\n//             key: 2,\r\n//             placeholder: \"Enter your name\",\r\n//             type: \"text\",\r\n//             id: \"username\",\r\n//           }),\r\n//           React.createElement(\r\n//             \"label\",\r\n//             { key: 3, htmlFor: \"password\" },\r\n//             \"Password\"\r\n//           ),\r\n//           React.createElement(\"input\", {\r\n//             key: 2,\r\n//             placeholder: \"Enter your Password\",\r\n//             type: \"password\",\r\n//             id: \"password\",\r\n//           }),\r\n//         ]),\r\n//       ]),\r\n//     ]),\r\n//   ]\r\n// );\r\n\r\n/*\r\n    Babel is a JavaScript compiler that allows you to write modern JavaScript (ES6+) and JSX code, \r\n    and then transforms it into code that is compatible with older browsers or environments. \r\n    In React projects, Babel is commonly used to convert JSX syntax into regular JavaScript that \r\n    browsers can understand.\r\n*/\r\n\r\n// JSX (JavaScript XML) is a syntax extension for JavaScript used in React to describe what the UI should look like.\r\n//  It allows you to write HTML-like code directly within JavaScript,\r\n//  which Babel then compiles into React.createElement calls.\r\n//  This makes it easier to visualize and build user interfaces.\r\n\r\n// now we can write the above code in jsx\r\n// below is the jsx code\r\n\r\n// IMPORTANT in react the react will not display the undefine , null , false values\r\n// but it will display 0 value\r\n\r\nconst container = (\r\n  <container className=\"container\">\r\n    <section className=\"section\">\r\n      <div className=\"content\">\r\n        <img\r\n          src=\"https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg\"\r\n          alt=\"animals\"\r\n          style={{ width: 200 }}\r\n        />\r\n      </div>\r\n      <form className=\"form-content\">\r\n        <div className=\"form-group\">\r\n          <label htmlFor=\"username\">username</label>\r\n          <input\r\n            placeholder=\"Enter your name\"\r\n            type=\"text\"\r\n            id=\"username\"\r\n          />\r\n          <label htmlFor=\"password\">Password</label>\r\n          <input\r\n            placeholder=\"Enter your Password\"\r\n            type=\"password\"\r\n            id=\"password\"\r\n          />\r\n        </div>\r\n      </form>\r\n    </section>\r\n  </container>\r\n);\r\n\r\nconst root = ReactDOM.createRoot(document.querySelector(\"#root\"));\r\nroot.render(container);\r\n"
+  ],
+  "mappings": ";;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;;AAEA;AACA;;AAEA;AACA;;AAEA,IAAMA,SAAS,gBACbC,KAAA,CAAAC,aAAA;EAAWC,SAAS,EAAC;AAAW,gBAC9BF,KAAA,CAAAC,aAAA;EAASC,SAAS,EAAC;AAAS,gBAC1BF,KAAA,CAAAC,aAAA;EAAKC,SAAS,EAAC;AAAS,gBACtBF,KAAA,CAAAC,aAAA;EACEE,GAAG,EAAC,oEAAoE;EACxEC,GAAG,EAAC,SAAS;EACbC,KAAK,EAAE;IAAEC,KAAK,EAAE;EAAI;AAAE,CACvB,CACE,CAAC,eACNN,KAAA,CAAAC,aAAA;EAAMC,SAAS,EAAC;AAAc,gBAC5BF,KAAA,CAAAC,aAAA;EAAKC,SAAS,EAAC;AAAY,gBACzBF,KAAA,CAAAC,aAAA;EAAOM,OAAO,EAAC;AAAU,GAAC,UAAe,CAAC,eAC1CP,KAAA,CAAAC,aAAA;EACEO,WAAW,EAAC,iBAAiB;EAC7BC,IAAI,EAAC,MAAM;EACXC,EAAE,EAAC;AAAU,CACd,CAAC,eACFV,KAAA,CAAAC,aAAA;EAAOM,OAAO,EAAC;AAAU,GAAC,UAAe,CAAC,eAC1CP,KAAA,CAAAC,aAAA;EACEO,WAAW,EAAC,qBAAqB;EACjCC,IAAI,EAAC,UAAU;EACfC,EAAE,EAAC;AAAU,CACd,CACE,CACD,CACC,CACA,CACZ;AAED,IAAMC,IAAI,GAAGC,QAAQ,CAACC,UAAU,CAACC,QAAQ,CAACC,aAAa,CAAC,OAAO,CAAC,CAAC;AACjEJ,IAAI,CAACK,MAAM,CAACjB,SAAS,CAAC",
+  "ignoreList": []
+}
