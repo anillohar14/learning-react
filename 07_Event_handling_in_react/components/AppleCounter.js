@@ -97,8 +97,6 @@ const AppleCounter = () => {
 
   return (
     <section>
-      <h1>Hello</h1>
-      <input type="text"/>
       <AppleBasket appleCount={leftApples} basketName="basket 1" />
       <Button imageURL={LeftArrow.href} onClick={leftArrowClicked} title="Left Arrow" />
       <Button imageURL={RightArrow.href} onClick={rightArrowClicked} title="Right Arrow" />
