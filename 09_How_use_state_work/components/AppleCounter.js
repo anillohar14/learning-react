@@ -48,12 +48,3 @@ const AppleCounter = () => {
 };
 
 export default AppleCounter;
-
-
-
-// step 11: now we are implementing the apple counter with state
-// step 12: first we have import the useState in this component
-// step 14: now we will create two states for both the basketes under the Applecounter component
-// step 15: here what we are doing is we are creating two states rightApples and leftApples and setting the initial value of rightApples to 0
-// and leftApples to totalApples - rightApples so initially leftApples will be 10
-// step 16: now we will use these states in the AppleBasket component
