@@ -1,0 +1,104 @@
+body{
+    --background-color: white;
+    --element-color:  white;
+    --text-color: black;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    font-family: Nunito;
+}
+body.dark{
+    --background-color: hsl(207, 26%, 17%);
+    --element-color:  hsl(209, 23%, 22%);
+    --text-color: hsl(0, 0%, 100%);
+}
+.back-button{
+    background-color: var(--element-color);
+    color: var(--text-color);
+    padding: 8px 24px;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+}
+.main-container{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 32px;
+}
+.dark-mode{
+    cursor: pointer;
+}
+.country-details{
+    margin-top: 84px;
+    display: flex;
+    gap: 84px;
+    align-items: center;
+}
+.country-details > img{
+    width: 400px;
+    box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+.country-details > img:hover{
+    transform: scale(1.01);
+    box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.1);
+}
+.details-text{
+    max-height: 180px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 12px;
+    column-gap: 12px;   
+}
+.details-text > p{
+    margin: 0;
+}
+.border-countries{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 32px;
+    cursor: pointer;
+}
+.border-countries > a:hover{
+    transform: scale(1.01);
+    box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.1);
+}
+.border-countries a{
+    background-color: var(--element-color);
+    color: var(--text-color);
+    transition: all 0.2s ease-in-out;
+    padding: 4px 16px;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    /* margin-inline: 5px */
+}
+@media(max-width: 860px){
+    .country-details{
+        flex-direction: column;
+        margin-top: 32px;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    .country-details > img{
+        border: solid 2px gainsboro;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease-in-out;
+    }
+    .country-details > img:hover{
+        transform: scale(1.01);
+        box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.1);
+    }
+    .details-text{
+        max-height: unset;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 12px;
+        column-gap: 64px;   
+    }
+}
