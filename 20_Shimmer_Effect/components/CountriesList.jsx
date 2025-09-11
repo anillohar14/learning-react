@@ -1,0 +1,39 @@
+import { useEffect, useState } from "react";
+import CountryCard from "./CountryCard";
+import CountryListShimmer from './ListShimmer.jsx';
+import ListShimmer from "./ListShimmer.jsx";
+export default function CountriesList({ query }) {
+  const [Countriesdata, setCountriesdata] = useState([]);
+
+  useEffect(() => {
+    fetch("https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital")
+      .then((res) => res.json())
+      .then((data) => {
+        setCountriesdata(data);
+      });
+  }, []);
+  if(Countriesdata.length === 0){
+    return <ListShimmer />
+  }
+  return (
+    <>
+      <div className="country-contianer">
+        {Countriesdata.filter((country) =>
+          country.name.common.toLowerCase().includes(query)
+        ).map((country) => {
+          return (
+            <CountryCard
+              key={country.name.common}
+              href={`${country.name.common}`} 
+              flag={country.flags.svg}
+              name={country.name.common}
+              population={country.population.toLocaleString("en-IN")}
+              region={country.region}
+              capital={country.capital}
+            />
+          );
+        })}
+      </div>
+    </>
+  );
+}
