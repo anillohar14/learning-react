@@ -6,6 +6,7 @@ function ExpenceForm({ setExpenses }) {
     category: "",
     amount: "",
   });
+const [errors, setErrors] = useState({})
 
   const validate = (formData) => {
     const errorData = {}
@@ -15,20 +16,21 @@ function ExpenceForm({ setExpenses }) {
     }
 
     if(!formData.category){
-      errorData.category = "Category is required"
+      errorData.category = "Select a Category"
     }
 
     if(!formData.amount){
       errorData.amount = "Amount is required"
     }
 
+    setErrors(errorData)
     return errorData
   }
-  const validateResult = validate(expense)
-  if(Object.keys(validateResult).length) return
   
   const handelSubmit = (e) => {
     e.preventDefault();
+    const validateResult = validate(expense)
+    if(Object.keys(validateResult).length) return
 
     setExpenses((prevState) => [
       ...prevState,
@@ -42,12 +44,12 @@ function ExpenceForm({ setExpenses }) {
   };
 
   const handelChange = (e) => {
-    console.log(e.target)
     const {name, value} = e.target
     setExpense((prevState) => ({
       ...prevState,
       [name]: [value],
     }));
+    setErrors({})
   };
 
 
@@ -61,6 +63,7 @@ function ExpenceForm({ setExpenses }) {
           value={expense.title}
           onChange={handelChange}
         />
+        <p className="error">{errors.title}</p>
       </div>
       <div className="input-container">
         <label htmlFor="category">Category</label>
@@ -79,6 +82,7 @@ function ExpenceForm({ setExpenses }) {
           <option value="education">Education</option>
           <option value="medicine">Medicine</option>
         </select>
+        <p className="error">{errors.category}</p>
       </div>
       <div className="input-container">
         <label htmlFor="amount">Amount</label>
@@ -88,6 +92,7 @@ function ExpenceForm({ setExpenses }) {
           value={expense.amount}
           onChange={handelChange}
         />
+        <p className="error">{errors.amount}</p> 
       </div>
       <button className="add-btn">Add</button>
     </form>
